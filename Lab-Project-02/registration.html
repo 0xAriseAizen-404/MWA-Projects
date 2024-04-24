@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Form</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #a1a1a1;
+    }
+
+    h1 {
+      color: #800080;
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    ul.navbar {
+      list-style-type: none;
+    }
+
+    li.nav-item {
+      float: left;
+      position: relative;
+      margin-left: 2em;
+    }
+
+    li.nav-item a {
+      display: block;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    li.nav-item a::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      bottom: -5px;
+      left: 0;
+      background-color: #4070F6;
+    }
+
+    header {
+      margin: 1em 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #444;
+      padding: 0 4em;
+
+      & img {
+        width: 70px;
+        height: 70px;
+      }
+
+      & ul {
+        height: 100%;
+      }
+    }
+
+    .vertical-menu {
+      width: 100px;
+      float: left;
+      padding: 10px;
+      background-color: #d2d2d2;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+      margin-left: 1rem;
+    }
+
+    .vertical-menu a {
+      background-color: #fff;
+      color: black;
+      display: block;
+      padding: 12px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .vertical-menu a:hover {
+      background-color: #4070F6;
+      transform: translateX(5px);
+    }
+
+    .container {
+      width: 50%;
+      margin: 10px auto;
+      padding: 10px 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #800080;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    label {
+      display: inline-block;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      background-color: #4caf50;
+      color: white;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s;
+    }
+
+    .vertical-menu a.active {
+      background-color: #4070F6;
+    }
+
+    input[type="checkbox"] {
+      margin-left: 1em;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Book Store Website</h1>
+  <header>
+    <img src=https://rvrjcce.ac.in/examcell/results/batchpg20/images/RVRJC-Estd-2.jpg alt="rvrlogo" width="100"
+      height="100" align="left">
+    <ul class="navbar">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="login.html">Login</a></li>
+      <li class="nav-item"><a href="registration.html">Registration</a></li>
+      <li class="nav-item"><a href="catalogue.html">Catalogue</a></li>
+      <li class="nav-item" style="float:right"><a href="cart.html">Cart</a></li>
+    </ul>
+  </header>
+
+  <div class="vertical-menu">
+    <a href="csbs.html">CSBS</a>
+    <a href="cse.html">CSE</a>
+    <a href="ece.html">ECE</a>
+    <a href="eee.html">EEE</a>
+    <a href="civil.html">CIVIL</a>
+  </div>
+  <div class="container">
+    <h1>Registration Form</h1>
+    <form id="registrationForm" action="#" method="POST" onsubmit="validateForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <span id="nameError" class="error"></span>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      <span id="passwordError" class="error"></span>
+
+      <label for="email">E-mail ID:</label>
+      <input type="email" id="email" name="email" required />
+      <span id="emailError" class="error"></span>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[6-9]{1}[0-9]{9}" required />
+      <span id="phoneError" class="error"></span>
+
+      <label>Sex:</label>
+      <input type="radio" id="male" name="gender" value="male" required />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required />
+      <label for="female">Female</label>
+      <span id="genderError" class="error"></span>
+      <br />
+      <br />
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required />
+      <span id="dobError" class="error"></span>
+      <br />
+      <br />
+      <label for="languages">Languages Known:</label><br />
+      <input type="checkbox" id="eng" name="languages" value="English" />
+      <label for="eng">English</label>
+      <input type="checkbox" id="tel" name="languages" value="Telugu" />
+      <label for="tel">Telugu</label>
+      <input type="checkbox" id="hin" name="languages" value="Hindi" />
+      <label for="hin">Hindi</label>
+      <input type="checkbox" id="tam" name="languages" value="Tamil" />
+      <label for="tam">Tamil</label>
+      <span id="languagesError" class="error"></span>
+      <br />
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+      <span id="addressError" class="error"></span>
+
+      <input type="submit" value="Register" />
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var password = document.getElementById("password").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var gender = document.querySelector('input[name="gender"]:checked');
+      var dob = document.getElementById("dob").value;
+      var languages = document.querySelectorAll(
+        'input[name="languages"]:checked'
+      );
+      var address = document.getElementById("address").value;
+
+      var isValid = true;
+
+      if (name.length < 6) {
+        document.getElementById("nameError").textContent =
+          "Name must be at least 6 characters long.";
+        isValid = false;
+      } else {
+        document.getElementById("nameError").textContent = "";
+      }
+
+      if (password.length < 6) {
+        document.getElementById("passwordError").textContent =
+          "Password must be at least 6 characters long.";
+        isValid = false;
+      } else {
+        document.getElementById("passwordError").textContent = "";
+      }
+
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        document.getElementById("emailError").textContent =
+          "Invalid email format.";
+        isValid = false;
+      } else {
+        document.getElementById("emailError").textContent = "";
+      }
+
+      var phonePattern = /^[6-9]\d{9}$/;
+      if (!phonePattern.test(phone)) {
+        document.getElementById("phoneError").textContent =
+          "Phone number should contain 10 digits only.";
+        isValid = false;
+      } else {
+        document.getElementById("phoneError").textContent = "";
+      }
+
+      if (!gender) {
+        document.getElementById("genderError").textContent =
+          "Please select gender.";
+        isValid = false;
+      } else {
+        document.getElementById("genderError").textContent = "";
+      }
+
+      if (!dob) {
+        document.getElementById("dobError").textContent =
+          "Please select date of birth.";
+        isValid = false;
+      } else {
+        document.getElementById("dobError").textContent = "";
+      }
+
+      if (languages.length === 0) {
+        document.getElementById("languagesError").textContent =
+          "Please select at least one language.";
+        isValid = false;
+      } else {
+        document.getElementById("languagesError").textContent = "";
+      }
+
+      if (!address) {
+        document.getElementById("addressError").textContent =
+          "Please enter address.";
+        isValid = false;
+      } else {
+        document.getElementById("addressError").textContent = "";
+      }
+
+      return isValid;
+    }
+  </script>
+</body>
+
+</html>

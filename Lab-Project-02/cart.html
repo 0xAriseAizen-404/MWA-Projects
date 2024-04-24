@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Store Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #a1a1a1;
+    }
+
+    h1 {
+      color: #800080;
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    ul.navbar {
+      list-style-type: none;
+    }
+
+    li.nav-item {
+      float: left;
+      position: relative;
+      margin-left: 2em;
+    }
+
+    li.nav-item a {
+      display: block;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    li.nav-item a::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      bottom: -5px;
+      left: 0;
+      background-color: #4070F6;
+    }
+
+    header {
+      margin: 1em 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #444;
+      padding: 0 4em;
+
+      & img {
+        width: 70px;
+        height: 70px;
+      }
+
+      & ul {
+        height: 100%;
+      }
+    }
+
+    .vertical-menu {
+      width: 100px;
+      float: left;
+      padding: 10px;
+      background-color: #d2d2d2;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+      margin-left: 1rem;
+    }
+
+    .vertical-menu a {
+      background-color: #fff;
+      color: black;
+      display: block;
+      padding: 12px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .vertical-menu a:hover {
+      background-color: #4070F6;
+      transform: translateX(5px);
+    }
+
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    td {
+      background-color: #f9f9f9;
+    }
+
+    h2 {
+      text-align: center;
+      color: #800080;
+    }
+    .vertical-menu a.active {
+      background-color: #4070F6;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Book Store Website</h1>
+  <header>
+    <img src=https://rvrjcce.ac.in/examcell/results/batchpg20/images/RVRJC-Estd-2.jpg alt="rvrlogo" width="100"
+      height="100" align="left">
+    <ul class="navbar">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="login.html">Login</a></li>
+      <li class="nav-item"><a href="registration.html">Registration</a></li>
+      <li class="nav-item"><a href="catalogue.html">Catalogue</a></li>
+      <li class="nav-item" style="float:right"><a href="cart.html">Cart</a></li>
+    </ul>
+  </header>
+
+  <div class="vertical-menu">
+    <a href="csbs.html">CSBS</a>
+    <a href="cse.html">CSE</a>
+    <a href="ece.html">ECE</a>
+    <a href="eee.html">EEE</a>
+    <a href="civil.html">CIVIL</a>
+  </div>
+  <table>
+    <tr>
+      <th>Book Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Amount</th>
+    </tr>
+    <tr>
+      <td>XML bible</td>
+      <td>$40.5</td>
+      <td>1</td>
+      <td>$40.5</td>
+    </tr>
+    <tr>
+      <td>HTML in 24hours</td>
+      <td>$50</td>
+      <td>2</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <h2>Total Amount = $140.5</h2>
+      </td>
+    </tr>
+  </table>
+  </div>
+</body>
+
+</html>

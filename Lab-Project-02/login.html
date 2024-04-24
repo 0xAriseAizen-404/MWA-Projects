@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Store Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #a1a1a1;
+    }
+
+    h1 {
+      color: #800080;
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    ul.navbar {
+      list-style-type: none;
+    }
+
+    li.nav-item {
+      float: left;
+      position: relative;
+      margin-left: 2em;
+    }
+
+    li.nav-item a {
+      display: block;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    li.nav-item a::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      bottom: -5px;
+      left: 0;
+      background-color: #4070F6;
+    }
+
+    header {
+      margin: 1em 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #444;
+      padding: 0 4em;
+
+      & img {
+        width: 70px;
+        height: 70px;
+      }
+
+      & ul {
+        height: 100%;
+      }
+    }
+
+    .vertical-menu {
+      width: 100px;
+      float: left;
+      padding: 10px;
+      background-color: #d2d2d2;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+      margin-left: 1rem;
+    }
+
+    .vertical-menu a {
+      background-color: #fff;
+      color: black;
+      display: block;
+      padding: 12px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .vertical-menu a:hover {
+      background-color: #4070F6;
+      transform: translateX(5px);
+    }
+
+    .login {
+      width: 70%;
+      margin: 20px auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    label {
+      color: #000000;
+      font-size: 20px;
+      padding: 8px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      width: 45%;
+      background-color: #70db70;
+      color: white;
+      padding: 14px 10px;
+      margin: 5px 0;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: background-color 0.4s;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #339900;
+    }
+    .vertical-menu a.active {
+      background-color: #4070F6;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Book Store Website</h1>
+  <header>
+    <img src=https://rvrjcce.ac.in/examcell/results/batchpg20/images/RVRJC-Estd-2.jpg alt="rvrlogo" width="100"
+      height="100" align="left">
+    <ul class="navbar">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="login.html">Login</a></li>
+      <li class="nav-item"><a href="registration.html">Registration</a></li>
+      <li class="nav-item"><a href="catalogue.html">Catalogue</a></li>
+      <li class="nav-item" style="float:right"><a href="cart.html">Cart</a></li>
+    </ul>
+  </header>
+
+  <div class="vertical-menu">
+    <a href="csbs.html">CSBS</a>
+    <a href="cse.html">CSE</a>
+    <a href="ece.html">ECE</a>
+    <a href="eee.html">EEE</a>
+    <a href="civil.html">CIVIL</a>
+  </div>
+  <div class="login">
+    <form id="login" name="myform" onsubmit="return validateform()">
+      <table>
+        <tr>
+          <td><label for="Uname">Login ID:</label></td>
+          <td><input type="email" name="Uname" id="Uname" placeholder="Email" required></td>
+        </tr>
+        <tr>
+          <td><label for="Pass">Password:</label></td>
+          <td><input type="password" name="Pass" id="Pass" placeholder="Password" required></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input type="submit" value="SUBMIT">&nbsp;&nbsp;
+            <input type="reset" value="RESET">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <script>
+    function validateform() {
+      var password = document.getElementById("Pass").value;
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+    }
+  </script>
+</body>
+
+</html>
