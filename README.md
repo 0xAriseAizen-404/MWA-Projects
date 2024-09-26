@@ -1,7 +1,7 @@
 | Lab Project   | Description                                       | Last Commit   | Live Demo                                                                |
 |---------------|---------------------------------------------------|---------------|--------------------------------------------------------------------------|
-| Lab-Project-01| Set sail with the maiden voyage of code!          | 3 weeks ago   | [Live demo](https://arise-aizen-404.github.io/MWA-Projects/Lab-Project-01) |
-| Lab-Project-02| Embarked on a journey into uncharted code realms! | 3 weeks ago   | [Live demo](https://arise-aizen-404.github.io/MWA-Projects/Lab-Project-02) |
+| Lab-Project-01| Set sail with the maiden voyage of code!          | 3 weeks ago   | [Live demo](https://0xariseaizen-404.github.io/MWA-Projects/Lab-Project-01) |
+| Lab-Project-02| Embarked on a journey into uncharted code realms! | 3 weeks ago   | [Live demo](https://0xariseaizen-404.github.io/MWA-Projects/Lab-Project-02) |
 
 ---
 
